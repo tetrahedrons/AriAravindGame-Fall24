@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using Unity.VisualScripting;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class IJKL : MonoBehaviour
 {
@@ -41,5 +42,12 @@ public class IJKL : MonoBehaviour
         Vector3 pos = transform.position;
         transform.position = new Vector3(pos.x + x * speed * Time.deltaTime, pos.y + y * speed * Time.deltaTime, pos.z);
 
+    }
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+        if (collision.gameObject.tag == "danger")
+        {
+           SceneManager.LoadScene(0);
+        }
     }
 }
