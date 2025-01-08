@@ -18,7 +18,7 @@ public class IJKL : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        y = 0; x = 0; speed = 2 ;
+        y = 0; x = 0; 
 
         if (Input.GetKey(KeyCode.I))
             {
